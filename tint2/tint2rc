@@ -26,7 +26,7 @@ border_color = #414140 100
 # Panel
 panel_monitor = all
 panel_position = bottom center horizontal
-panel_size = 0 19
+panel_size = 0 25
 panel_margin = 0 0
 panel_padding = 0 0 0
 panel_dock = 0
@@ -110,7 +110,7 @@ battery_low_cmd = notify-send "battery low"
 battery_hide = 90
 bat1_font = Source Sans Pro Semi-Bold 9
 bat2_font = Source Sans Pro Semi-Bold 9
-battery_font_color = #FFFFFF 64
+battery_font_color = #FFFFFF 63
 battery_padding = 0 0
 battery_background_id = 1
 
