@@ -1,0 +1,59 @@
+double_buffer yes
+background yes
+
+use_xft yes
+xftfont Source Sans Pro:bold:pixelsize=9
+xftalpha 0.9
+
+update_interval 1.0
+
+total_run_times 0
+
+own_window yes
+own_window_type desktop
+own_window_transparent yes
+own_window_hints undecorated,below,skip_taskbar,sticky,skip_pager
+no_buffers yes
+minimum_size 220 100
+draw_shades no
+draw_outline no
+draw_borders no
+stippled_borders 0
+alignment bottom_right
+gap_x 10
+gap_y 29
+uppercase yes
+
+#use_spaces yes
+
+color0 ecf0f1
+color1 2c3e50
+color2 f1c40f
+
+TEXT
+${color2}${alignr}Time / Info
+${color1}os:     ${alignr}${color0}${sysname} ${kernel}
+${color1}uptime: ${alignr}${color0}$uptime
+${color1}core temperature: ${alignr}${color0}$acpitemp °C
+${color1}battery:    ${alignr}${color0}$battery_percent %
+
+
+${color2}${alignr}CPU
+${color1}freq:   ${color0}${alignr}${freq} Mhz
+${color1}core 1: ${color0}${cpu cpu1}% ${alignr}${cpubar cpu1 6,135}
+${color1}core 2: ${color0}${cpu cpu2}% ${alignr}${cpubar cpu2 6,135}
+${color1}core 3: ${color0}${cpu cpu3}% ${alignr}${cpubar cpu3 6,135}
+${color1}core 4: ${color0}${cpu cpu4}% ${alignr}${cpubar cpu4 6,135}
+
+
+${color2}${alignr}Memory
+${color1}ram: ${color0}$memperc%${alignr}${membar 6,135}
+
+
+${color2}${alignr}Top
+${color1}Proc. ${alignc}CPU ${alignr}MEM
+${color1}${top name 1} ${color0}${alignc}${top cpu 1} ${alignr}${top mem 1}
+${color1}${top name 2} ${color0}${alignc}${top cpu 2} ${alignr}${top mem 2}
+${color1}${top name 3} ${color0}${alignc}${top cpu 3} ${alignr}${top mem 3}
+${color1}${top name 4} ${color0}${alignc}${top cpu 4} ${alignr}${top mem 4}
+${color1}${top name 5} ${color0}${alignc}${top cpu 5} ${alignr}${top mem 5}
