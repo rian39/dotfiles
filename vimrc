@@ -1,9 +1,12 @@
 set nocompatible
 
+"The cursor is never on the last line
 set scrolloff=3
 
-set ruler
+"Search is not highlighted
 set nohlsearch
+
+"Files are read as soon as they are changed
 set autoread
 
 "Various general options
