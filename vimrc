@@ -29,7 +29,10 @@ set t_Co=256
 set background=dark
 colorscheme flat
 
+"For the R plugin
 let vimrplugin_screenplugin = 0
+
+map q {!}fmt -w 80
 
 "Pathogen
 execute pathogen#infect()
