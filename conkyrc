@@ -21,7 +21,7 @@ draw_borders no
 stippled_borders 0
 alignment bottom_right
 gap_x 10
-gap_y 29
+gap_y 35
 uppercase yes
 
 #use_spaces yes
