@@ -1,0 +1,40 @@
+# vim: filetype=muttrc
+
+# Header
+color hdrdefault blue default
+
+# Specific headers
+color header brightgreen default "From: " 
+color header brightyellow default "Subject: " 
+
+# Attachment within the message
+color attachment yellow default 
+
+# Levels of quoted previous messages
+color quoted green default 
+color quoted1 cyan default 
+color quoted2 green default 
+color quoted3 cyan default 
+
+# Messages
+color error red default # error messages 
+color message yellow default # message informational messages 
+
+color indicator black yellow # indicator for the "current message" 
+
+color status green default# status lines in the folder index sed for the mini-help line 
+
+
+color tree cyan default # the "tree" display of threads within the folder index 
+
+color search brightgreen default # search matches found with search within the internal pager 
+color markers black default # The markers indicate a wrapped line 
+color index brightmagenta default '~N'
+color index brightred default '~F' # Flagged Messages are important! 
+color index red default '~D' # Deleted Mails - use dark color as these are already "dealt with"
+
+# identifies email addresses 
+color body brightgreen black [\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+
+
+# identifies URLs 
+color body brightblue black (https?|ftp)://[\-\.,/%~_:?&=\#a-zA-Z0-9]+

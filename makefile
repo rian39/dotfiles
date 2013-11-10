@@ -5,8 +5,9 @@ vimflat = ~/.vim/colors/flat.vim
 bashrc = ~/.bashrc
 xresources = ~/.Xresources
 muttrc = ~/.muttrc
+muttcol = ~/.mutt/colors
 
-all: folders conky vim flat tint2 mutt x bash
+all: folders conky vim flat tint2 mutt x bash muttcolor
 	chmod -x vimrc
 
 folders:
@@ -34,3 +35,6 @@ x: $(xresources)
 
 mutt: $(muttrc)
 	cp $(muttrc) muttrc
+
+muttcolor: $(muttcol)
+	cp $(muttcol) mutt_colors
