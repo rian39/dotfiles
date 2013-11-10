@@ -9,6 +9,10 @@ export PATH=$PATH:/home/tpoisot/.gem/ruby/2.0.0/bin
 
 alias ls='ls --color=auto'
 alias grep='grep --color=always'
+alias gpom='git push origin master'
+alias gpull='git pull'
+alias gstat='git status'
+alias gdiff='git diff'
 
 PS1="\[\033[31;1m\]>\[\033[m\] "
 
