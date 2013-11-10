@@ -229,10 +229,12 @@ call <sid>hi("NERDTreeExecFile",  s:gui05, "", s:clouds, "", "")
 " vim-pandoc
 call <sid>hi("pandocNoFormatted", "", "", s:turquoise, "", "")
 call <sid>hi("pandocListItem", "", "", s:amethyst, "", "bold")
-call <sid>hi("pandocAtxHeader", "", "", s:peterriver, "", "bold")
-call <sid>hi("pandocBlockQuote", "", "", s:orange, "", "")
-call <sid>hi("pandocDelimitedCodeBlock", "", "", s:emerald, "", "")
-call <sid>hi("pandocPCite", "", "", s:nephritis, "", "")
+call <sid>hi("pandocAtxHeader", "", "", s:orange, "", "bold")
+call <sid>hi("pandocSetexHeader", "", "", s:orange, "", "bold")
+call <sid>hi("pandocBlockQuote", "", "", s:peterriver, "", "")
+call <sid>hi("pandocDelimitedCodeBlock", "", "", s:turquoise, "", "")
+call <sid>hi("pandocCodeBlock", "", "", s:turquoise, "", "")
+call <sid>hi("pandocPCite", "", "", s:emerald, "", "")
 
 " Remove functions
 delf <sid>hi
