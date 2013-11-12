@@ -2,10 +2,10 @@ double_buffer yes
 background yes
 
 use_xft yes
-xftfont Source Sans Pro:bold:pixelsize=9
+xftfont Roboto:bold:pixelsize=9
 xftalpha 0.9
 
-update_interval 1.0
+update_interval 2.0
 
 total_run_times 0
 
@@ -20,14 +20,14 @@ draw_outline no
 draw_borders no
 stippled_borders 0
 alignment bottom_right
-gap_x 10
-gap_y 35
+gap_x 20
+gap_y 45
 uppercase yes
 
 #use_spaces yes
 
 color0 ecf0f1
-color1 2c3e50
+color1 9b59b6
 color2 f1c40f
 
 TEXT

@@ -1,11 +1,10 @@
 # vim: filetype=muttrc
 
 # Header
-color hdrdefault blue default
+color hdrdefault white default
 
 # Specific headers
-color header brightgreen default "From: " 
-color header brightyellow default "Subject: " 
+color header brightblue default "Subject: " 
 
 # Attachment within the message
 color attachment yellow default 
@@ -34,7 +33,7 @@ color index brightred default '~F' # Flagged Messages are important!
 color index red default '~D' # Deleted Mails - use dark color as these are already "dealt with"
 
 # identifies email addresses 
-color body brightgreen black [\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+
+color body green black [\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+
 
 # identifies URLs 
-color body brightblue black (https?|ftp)://[\-\.,/%~_:?&=\#a-zA-Z0-9]+
+color body red black (https?|ftp)://[\-\.,/%~_:?&=\#a-zA-Z0-9]+

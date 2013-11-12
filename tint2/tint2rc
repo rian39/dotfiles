@@ -8,25 +8,19 @@
 # ID 1
 rounded = 0
 border_width = 0
-background_color = #DDDDDD 100
-border_color = #BBBBBB 100
+background_color = #B7B7B7 9
+border_color = #FFFFFF 2
 
 # ID 2
 rounded = 0
 border_width = 0
-background_color = #2F5FA3 100
+background_color = #000000 100
 border_color = #FFFFFF 100
-
-# ID 3
-rounded = 0
-border_width = 0
-background_color = #414140 100
-border_color = #414140 100
 
 # Panel
 panel_monitor = all
-panel_position = bottom center horizontal
-panel_size = 0 25
+panel_position = bottom left horizontal
+panel_size = 0 30
 panel_margin = 0 0
 panel_padding = 0 0 0
 panel_dock = 0
@@ -43,7 +37,7 @@ strut_policy = follow_size
 
 # Taskbar
 taskbar_mode = single_desktop
-taskbar_padding = 0 0 0
+taskbar_padding = 2 2 0
 taskbar_background_id = 0
 #taskbar_active_background_id = 0
 
@@ -53,9 +47,9 @@ task_icon = 0
 task_text = 1
 task_centered = 1
 task_maximum_size = 200 32
-task_padding = 4 4
+task_padding = 2 2
 task_background_id = 0
-task_active_background_id = 2
+task_active_background_id = 0
 task_urgent_background_id = 0
 task_iconified_background_id = 0
 
@@ -66,27 +60,28 @@ task_urgent_icon_asb = 100 0 0
 task_iconified_icon_asb = 100 0 0
 
 # Fonts
-task_font = Source Sans Pro Semi-Bold 9
-task_font_color = #303030 100
-task_active_font_color = #DFDDDD 100
-task_urgent_font_color = #AF3636 100
-task_iconified_font_color = #707070 100
+task_font = Roboto Medium 10
+task_font_color = #FFFFFF 77
+task_active_font_color = #FFFFFF 100
+task_urgent_font_color = #CB2323 100
+task_iconified_font_color = #FFFFFF 48
 font_shadow = 0
 
 # System Tray
 systray = 1
-systray_padding = 1 1 1
+systray_padding = 0 0 0
 systray_sort = ascending
 systray_background_id = 0
 systray_icon_size = 0
 systray_icon_asb = 100 0 0
 
 # Clock
-time1_format = %a %d %b %H:%M
-time1_font = Source Sans Pro Semi-Bold 9
-clock_font_color = #505050 80
-clock_padding = 4 0
-clock_background_id = 1
+time1_format = %H:%M
+time1_font = Roboto Heavy 12
+clock_font_color = #FFFFFF 100
+clock_tooltip = 
+clock_padding = 5 5
+clock_background_id = 0
 
 # Tooltips
 tooltip = 0
@@ -99,19 +94,19 @@ tooltip_font_color = #FFFFFF 100
 
 # Mouse
 mouse_middle = none
-mouse_right = close
-mouse_scroll_up = toggle
-mouse_scroll_down = iconify
+mouse_right = none
+mouse_scroll_up = none
+mouse_scroll_down = none
 
 # Battery
 battery = 0
-battery_low_status = 10
+battery_low_status = 20
 battery_low_cmd = notify-send "battery low"
 battery_hide = 90
-bat1_font = Source Sans Pro Semi-Bold 9
-bat2_font = Source Sans Pro Semi-Bold 9
-battery_font_color = #FFFFFF 63
+bat1_font = Roboto Medium 10
+bat2_font = Roboto Medium 10
+battery_font_color = #FFFFFF 100
 battery_padding = 0 0
-battery_background_id = 1
+battery_background_id = 0
 
 # End of config

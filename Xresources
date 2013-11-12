@@ -5,8 +5,8 @@ XTerm*locale: true
 !URxvt*font: xft:Terminus:size=12x24:hinting=true
 !URxvt*boldFont: xft:Terminus:bold:size=12x24:hinting=true
 
-URxvt*font: xft:Source Code Pro:pixelsize=13:hinting=true
-URxvt*boldFont: xft:Source Code Pro:bold:pixelsize=13:hinting=true
+URxvt*font: xft:Monaco:pixelsize=12:hinting=true
+URxvt*boldFont: xft:Monaco:bold:pixelsize=12:hinting=true
 
 URxvt.scrollBar: false
 URxvt*depth: 32

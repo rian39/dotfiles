@@ -94,15 +94,26 @@ endfun
 
 " Return terminal color for light/dark variants
 fun s:cterm(color)
-  if &background == "dark"
-    return a:color
-  endif
-
-  if a:color == s:midnight
-    return s:clouds
-  elseif a:color == s:clouds
-    return s:midnight
-  endif
+   if &background == "dark"
+      return a:color
+   endif
+   if a:color == s:midnight
+      return s:clouds
+   elseif a:color == s:clouds
+      return s:midnight
+   elseif a:color == s:turquoise
+      return s:greensea
+   elseif a:color == s:emerald
+      return s:nephritis
+   elseif a:color == s:peterriver
+      return s:belizehole
+   elseif a:color == s:amethyst
+      return s:wisteria
+   elseif a:color == s:sunflower
+      return s:orange
+   elseif a:color == s:alizarin
+      return s:pomegranate
+   endif
 
   return a:color
 endfun
