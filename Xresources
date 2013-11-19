@@ -2,72 +2,42 @@ xterm*termname: xterm-256color
 XTerm*locale: true
 
 !6x12, 8x14, 8x16, 10x18, 10x20, 11x22, 12x24, 14x28 and 16x32.
-!URxvt*font: xft:Terminus:size=12x24:hinting=true
-!URxvt*boldFont: xft:Terminus:bold:size=12x24:hinting=true
+!URxvt*font: xft:Terminus:size=10x20:hinting=true
+!URxvt*boldFont: xft:Terminus:bold:size=10x20:hinting=true
 
-URxvt*font: xft:Monaco:pixelsize=12:hinting=true
-URxvt*boldFont: xft:Monaco:bold:pixelsize=12:hinting=true
+URxvt*font: xft:Inconsolata:pixelsize=15:hinting=true
+!URxvt*boldFont: xft:Inconsolata:bold:pixelsize=14:hinting=true
 
 URxvt.scrollBar: false
 URxvt*depth: 32
-URxvt*geometry: 90x30
+URxvt*geometry: 88x30
 
 URxvt*iconFile: /usr/share/icons/Faience/apps/scalable/terminal.svg 
 
-#define turquoise #1abc9c
-#define greensea #16a085
-#define emerald #2ecc71
-#define nephritis #27ae60
-#define peterriver #3498db
-#define belizehole #2980b9
-#define amethyst #9b59b6
-#define wisteria #8e44ad
-#define wetasphalt #34495e
-#define midnightblue #2c3e50
-#define sunflower #f1c40f
-#define orange #f39c12
-#define carrot #e67e22
-#define pumpkin #d35400
-#define alizarin #e74c3c
-#define pomegranate #c0392b
-#define clouds #ecf0f1
-#define silver #bdc3c7
-#define concrete #95a5a6
-#define asbestos #7f8c8d
-
-! flat scheme
-*background: midnightblue
-*foreground: clouds
+*background: #181818
+*foreground: #cccccc
 *fading: 10
-
-! Black (not tango) + DarkGrey
-*color0:  midnightblue
-*color8:  asbestos
-
-! DarkRed + Red
-*color1:  pomegranate
-*color9:  alizarin
-
-! DarkGreen + Green
-*color2:  nephritis
-*color10: emerald
-
-! DarkYellow + Yellow
-*color3:  orange
-*color11: sunflower
-
-! DarkBlue + Blue
-*color4:  belizehole
-*color12: peterriver
-
-! DarkMagenta + Magenta
-*color5:  wisteria
-*color13: amethyst	
-
-!DarkCyan + Cyan (both not tango)
-*color6:  greensea
-*color14: turquoise
-
-! LightGrey + White
-*color7:  silver
-*color15: clouds
+! black
+*color0: #181818
+*color8: #404040
+! red
+*color1: #B85335
+*color9: #CF6A4C
+! green
+*color2: #799D6A
+*color10: #99AD6A
+! yellow
+*color3: #FFB964
+*color11: #FAD07A
+! blue
+*color4: #667899
+*color12: #8197BF
+! magenta
+*color5: #8787AF
+*color13: #C6B6EE
+! cyan
+*color6: #668799
+*color14: #8FBFDC
+! white
+*color7: #888888
+*color15: #E8E8D3

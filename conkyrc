@@ -2,7 +2,7 @@ double_buffer yes
 background yes
 
 use_xft yes
-xftfont Roboto:bold:pixelsize=9
+xftfont Lato:pixelsize=10
 xftalpha 0.9
 
 update_interval 2.0
@@ -19,16 +19,16 @@ draw_shades no
 draw_outline no
 draw_borders no
 stippled_borders 0
-alignment bottom_right
+alignment bottom_left
 gap_x 20
-gap_y 45
+gap_y 20
 uppercase yes
 
 #use_spaces yes
 
-color0 ecf0f1
-color1 9b59b6
-color2 f1c40f
+color0 cccccc
+color1 e8e8d3
+color2 ffb964
 
 TEXT
 ${color2}${alignr}Time / Info
