@@ -24,5 +24,5 @@ export GIT_PS1_SHOWSTASHSTATE=1
 export GIT_PS1_SHOWUNTRACKEDFILES=1
 
 
-#return value visualisation
-PS1="\[\e]0;\W\a\]\$(if [[ \$? == 0 ]]; then echo \"\[\033[01;32m\][\342\234\223]\"; else echo \"\[\033[01;31m\][\342\234\227]\"; fi)\[\033[33;2m\]\$\[\033[00m\] "
+# 
+export PS1='\[\e]0;\w\a\]\[\033[1;$(echo `expr 33 + $?`)m\]@ \[\033[01;32m\]\W\[\033[31m\]$(__git_ps1) \[\033[35m\]\$\[\033[00m\] '

@@ -2,12 +2,13 @@ vimrc = ~/.vimrc
 conkyrc = ~/.conkyrc
 tint2rc = ~/.config/tint2/tint2rc
 vimflat = ~/.vim/colors/flat.vim
+vimtim = ~/.vim/colors/tim.vim
 bashrc = ~/.bashrc
 xresources = ~/.Xresources
 muttrc = ~/.muttrc
 muttcol = ~/.mutt/colors
 
-all: folders conky vim flat tint2 mutt x bash muttcolor
+all: folders conky vim vimsc tint2 mutt x bash muttcolor
 	chmod -x vimrc
 
 folders:
@@ -24,8 +25,9 @@ conky: $(conkyrc)
 vim: $(vimrc)
 	cp $(vimrc) vimrc
 
-flat: $(vimflat)
+vimsc: $(vimflat) $(vimtim)
 	cp $(vimflat) vim/colors/flat.vim
+	cp $(vimtim) vim/colors/tim.vim
 
 bash: $(bashrc)
 	cp $(bashrc) bashrc

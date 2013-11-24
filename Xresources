@@ -1,12 +1,12 @@
 xterm*termname: xterm-256color
 XTerm*locale: true
 
-!6x12, 8x14, 8x16, 10x18, 10x20, 11x22, 12x24, 14x28 and 16x32.
-!URxvt*font: xft:Terminus:size=10x20:hinting=true
-!URxvt*boldFont: xft:Terminus:bold:size=10x20:hinting=true
-
-URxvt*font: xft:Inconsolata:pixelsize=15:hinting=true
+!URxvt*font: xft:Inconsolata:pixelsize=14:hinting=true:antialias=true
 !URxvt*boldFont: xft:Inconsolata:bold:pixelsize=14:hinting=true
+
+URxvt*.cursorBlink: 1
+URxvt*.foreground: #e8e8d3
+URxvt*.font: xft:Dina:size=10:hinting=true:antialias=false
 
 URxvt.scrollBar: false
 URxvt*depth: 32
@@ -14,30 +14,41 @@ URxvt*geometry: 88x30
 
 URxvt*iconFile: /usr/share/icons/Faience/apps/scalable/terminal.svg 
 
-*background: #181818
-*foreground: #cccccc
-*fading: 10
-! black
-*color0: #181818
-*color8: #404040
-! red
-*color1: #B85335
-*color9: #CF6A4C
-! green
-*color2: #799D6A
-*color10: #99AD6A
-! yellow
-*color3: #FFB964
-*color11: #FAD07A
-! blue
-*color4: #667899
-*color12: #8197BF
-! magenta
-*color5: #8787AF
-*color13: #C6B6EE
-! cyan
-*color6: #668799
-*color14: #8FBFDC
-! white
-*color7: #888888
-*color15: #E8E8D3
+!Foreground & Background
+URxvt.background: 	  #121419
+URxvt.foreground:  	  #E8E6E4
+
+!Misc
+URxvt*highlightColor:     #757F8E
+URxvt*highlightTextColor: #15171A
+URxvt*cursorColor:        #758A8E
+URxvt*pointerColor:       #999CA1
+URxvt*colorBD:            #B8BCC2
+URxvt*colorUL:            #B59279
+URxvt*underlineColor:     #B6937A
+
+!Black
+URxvt*color0:             #505152
+URxvt*color8:             #7C7D7E
+!Red
+URxvt*color1:             #B63F53
+URxvt*color9:             #E8909B
+!Green
+URxvt*color2:             #51997A
+URxvt*color10:            #9EDCBB
+!Yellow
+URxvt*color3:             #B27B42
+URxvt*color11:            #DCC58F
+!Blue
+URxvt*color4:             #5C95B3
+URxvt*color12:            #A7C8D4
+!Magenta
+URxvt*color5:             #B85A86
+URxvt*color13:            #D9A4C8
+!Cyan
+URxvt*color6:             #83A6A7
+URxvt*color14:            #BBD7D2
+!White
+URxvt*color7:             #A4A6A7
+URxvt*color15:            #E8E6E4
+
