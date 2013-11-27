@@ -8,13 +8,13 @@
 # ID 1
 rounded = 0
 border_width = 0
-background_color = #B7B7B7 9
+background_color = #E8E6E4 40
 border_color = #FFFFFF 0
 
 # ID 2
 rounded = 0
 border_width = 0
-background_color = #000000 100
+background_color = #DCC58F 25
 border_color = #FFFFFF 100
 
 # Panel
@@ -46,7 +46,7 @@ urgent_nb_of_blink = 7
 task_icon = 0
 task_text = 1
 task_centered = 1
-task_maximum_size = 2000 32
+task_maximum_size = 20000 32
 task_padding = 2 2
 task_background_id = 0
 task_active_background_id = 0
@@ -60,11 +60,11 @@ task_urgent_icon_asb = 100 0 0
 task_iconified_icon_asb = 100 0 0
 
 # Fonts
-task_font = Lato Heavy 10
-task_font_color = #ECF0F1 100
-task_active_font_color = #FFB964 100
-task_urgent_font_color = #B85335 100
-task_iconified_font_color = #FFFFFF 60
+task_font = Roboto Medium 10
+task_font_color = #505152 100
+task_active_font_color = #E6E8E4 100
+task_urgent_font_color = #B63F53 100
+task_iconified_font_color = #505152 40
 font_shadow = 0
 
 # System Tray
@@ -77,7 +77,7 @@ systray_icon_asb = 100 0 0
 
 # Clock
 time1_format = %H:%M
-time1_font = Lato Heavy 11
+time1_font = Roboto Heavy 11
 clock_font_color = #FFFFFF 100
 clock_tooltip = 
 clock_padding = 5 5

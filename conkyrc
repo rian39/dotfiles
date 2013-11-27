@@ -2,7 +2,7 @@ double_buffer yes
 background yes
 
 use_xft yes
-xftfont Lato:pixelsize=10
+xftfont Roboto:pixelsize=8
 xftalpha 0.9
 
 update_interval 2.0
@@ -26,9 +26,9 @@ uppercase yes
 
 #use_spaces yes
 
-color0 cccccc
-color1 e8e8d3
-color2 ffb964
+color0 dadbdb
+color1 1f1f1f
+color2 e0cc8f
 
 TEXT
 ${color2}${alignr}Time / Info
