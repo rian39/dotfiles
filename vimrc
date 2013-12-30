@@ -1,4 +1,39 @@
 set nocompatible
+set hidden
+filetype off
+set cursorline
+
+" Replace <Leader> with ,
+let mapleader = ","
+
+" Better auto-completion of options
+set wildmenu
+set wildmode=list:longest
+
+" Ignorecase when searching with /, keep case when searching with *
+set ignorecase
+set smartcase
+
+" Stop highlighting search matches
+nmap <silent> <leader>n :silent :nohlsearch<CR>
+
+" Scroll faster
+nnoremap <C-e> 5<C-e>
+nnoremap <C-y> 5<C-y>
+set ruler
+
+" Intuitive backspacing in insert mode
+set backspace=indent,eol,start
+
+" VUNDLE 
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+Bundle 'gmarik/vundle'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'tpope/vim-markdown'
+Bundle 'mikewest/vimroom'
+Bundle 'vim-pandoc/vim-pandoc'
+" END VUNDLE
 
 "The cursor is never on the last line
 set scrolloff=3
@@ -11,7 +46,7 @@ set autoread
 
 "Various general options
 set noswapfile
-set noerrorbells "STFU!
+set noerrorbells
 set visualbell
 set nobackup
 set nowritebackup
@@ -21,22 +56,17 @@ set foldmethod=marker
 "Line numbers and syntax
 set number "Line numbers
 syntax enable "Syntax coloration
-filetype off
 filetype plugin indent on
 
 set t_Co=256
 
-set background=dark
-colorscheme tim
-
+set background=light
+colorscheme solarized
 
 "For the R plugin
 let vimrplugin_screenplugin = 0
 
 map q {!}fmt -w 80
-
-"Pathogen
-execute pathogen#infect()
 
 "Bib file for pandoc
 let g:pandoc_bibfiles = ['/home/tpoisot/texmf/bibtex/bib/local/library.bib']

@@ -9,7 +9,7 @@ set pager_context = 3      # show status in the pager
 set delete = ask-yes
 set print = ask-yes
 set sort_aux = date-received
-set nostrict_threads
+#set nostrict_threads
 set quote_regexp="^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
 alternative_order text/enriched text/plain text/html 
 set nomark_old             # mark all unread messages as unread
@@ -40,4 +40,4 @@ set imap_keepalive = 900
 #macro pager \cu |urlview\n
 
 source "$HOME/.mutt/aliases"
-source "$HOME/.mutt/colors"
+source "$HOME/.mutt/colors-sol"

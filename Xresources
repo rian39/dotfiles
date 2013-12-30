@@ -1,12 +1,10 @@
 xterm*termname: xterm-256color
 XTerm*locale: true
 
-!URxvt*font: xft:Inconsolata:pixelsize=14:hinting=true:antialias=true
-!URxvt*boldFont: xft:Inconsolata:bold:pixelsize=14:hinting=true
-
 URxvt*.cursorBlink: 1
-URxvt*.foreground: #e8e8d3
-URxvt*.font: xft:Dina:size=9:hinting=true:antialias=false
+!*.font: xft:Dina:size=10:hinting=true:antialias=false
+!*.font: xft:Source Code Pro:pixelsize=12
+*.font: xft:Cousine:pixelsize=12
 
 URxvt.scrollBar: false
 URxvt*depth: 32
@@ -15,30 +13,4 @@ URxvt*fading: 10
 
 URxvt*iconFile: /usr/share/icons/Faience/apps/scalable/terminal.svg 
 
-URxvt.background: #1f1f1f
-URxvt.foreground: #dadbdb
-!Black
-URxvt.color0: #454545
-URxvt.color8: #787878
-!Red
-URxvt.color1: #ad3956
-URxvt.color9: #e38aa2
-!Green
-URxvt.color2: #52a838
-URxvt.color10: #9de086
-!Yellow
-URxvt.color3: #a88e42
-URxvt.color11: #e0cc8f
-!Blue
-URxvt.color4: #4863b5
-URxvt.color12: #98adeb
-!Magenta
-URxvt.color5: #9144ab
-URxvt.color13: #ce8fe3
-!Cyan
-URxvt.color6: #38947d
-URxvt.color14: #8ed4c4
-!White
-URxvt.color7: #a3a3a3
-URxvt.color15: #dadbdb
-
+#include ".schemes/solarized-light"

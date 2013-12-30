@@ -2,7 +2,7 @@ double_buffer yes
 background yes
 
 use_xft yes
-xftfont Roboto:pixelsize=8
+xftfont Cousine:bold:pixelsize=12
 xftalpha 0.9
 
 update_interval 2.0
@@ -14,46 +14,23 @@ own_window_type desktop
 own_window_transparent yes
 own_window_hints undecorated,below,skip_taskbar,sticky,skip_pager
 no_buffers yes
-minimum_size 220 100
+minimum_size 100 0
 draw_shades no
 draw_outline no
 draw_borders no
 stippled_borders 0
-alignment bottom_left
-gap_x 20
-gap_y 20
+alignment bottom_middle
+gap_x 0
+gap_y 5
 uppercase yes
+use_spacer left
+pad_percents 3
 
 #use_spaces yes
 
-color0 dadbdb
-color1 1f1f1f
-color2 e0cc8f
+color0 eee8d5
+color1 002b36
+color2 ffd9cb
 
 TEXT
-${color2}${alignr}Time / Info
-${color1}os:     ${alignr}${color0}${sysname} ${kernel}
-${color1}uptime: ${alignr}${color0}$uptime
-${color1}core temperature: ${alignr}${color0}$acpitemp °C
-${color1}battery:    ${alignr}${color0}$battery_percent %
-
-
-${color2}${alignr}CPU
-${color1}freq:   ${color0}${alignr}${freq} Mhz
-${color1}core 1: ${color0}${cpu cpu1}% ${alignr}${cpubar cpu1 6,135}
-${color1}core 2: ${color0}${cpu cpu2}% ${alignr}${cpubar cpu2 6,135}
-${color1}core 3: ${color0}${cpu cpu3}% ${alignr}${cpubar cpu3 6,135}
-${color1}core 4: ${color0}${cpu cpu4}% ${alignr}${cpubar cpu4 6,135}
-
-
-${color2}${alignr}Memory
-${color1}ram: ${color0}$memperc%${alignr}${membar 6,135}
-
-
-${color2}${alignr}Top
-${color1}Proc. ${alignc}CPU ${alignr}MEM
-${color1}${top name 1} ${color0}${alignc}${top cpu 1} ${alignr}${top mem 1}
-${color1}${top name 2} ${color0}${alignc}${top cpu 2} ${alignr}${top mem 2}
-${color1}${top name 3} ${color0}${alignc}${top cpu 3} ${alignr}${top mem 3}
-${color1}${top name 4} ${color0}${alignc}${top cpu 4} ${alignr}${top mem 4}
-${color1}${top name 5} ${color0}${alignc}${top cpu 5} ${alignr}${top mem 5}
+${color1}OS ${color0}${kernel} ${color2}|| ${color1}TEMP${color0}$acpitemp°C ${color2}|| ${color1}BAT ${color2}[${color0}$battery_percent${color2}] ${color2}|| ${color1}CPU ${color2}[${color0}${cpu cpu1}${color2}] ${color2}[${color0}${cpu cpu2}${color2}] ${color2}[${color0}${cpu cpu3}${color2}] ${color2}[${color0}${cpu cpu4}${color2}] ${color2}|| ${color1}MEM ${color2}[${color0}$memperc${color2}] ${color2}|| ${color1}UP ${color0}$uptime_short
