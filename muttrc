@@ -40,4 +40,4 @@ set imap_keepalive = 900
 #macro pager \cu |urlview\n
 
 source "$HOME/.mutt/aliases"
-source "$HOME/.mutt/colors-sol"
+source "/home/tpoisot/.mutt/colors"

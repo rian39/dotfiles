@@ -2,7 +2,7 @@ double_buffer yes
 background yes
 
 use_xft yes
-xftfont Cousine:bold:pixelsize=12
+xftfont Meslo LG M:style=Regular:pixelsize=10
 xftalpha 0.9
 
 update_interval 2.0
@@ -14,7 +14,7 @@ own_window_type desktop
 own_window_transparent yes
 own_window_hints undecorated,below,skip_taskbar,sticky,skip_pager
 no_buffers yes
-minimum_size 100 0
+minimum_size 10 0
 draw_shades no
 draw_outline no
 draw_borders no
@@ -28,9 +28,9 @@ pad_percents 3
 
 #use_spaces yes
 
-color0 eee8d5
-color1 002b36
-color2 ffd9cb
+color0 f5f5f5
+color1 f0f0f0
+color2 d0d0d0
 
 TEXT
 ${color1}OS ${color0}${kernel} ${color2}|| ${color1}TEMP${color0}$acpitemp°C ${color2}|| ${color1}BAT ${color2}[${color0}$battery_percent${color2}] ${color2}|| ${color1}CPU ${color2}[${color0}${cpu cpu1}${color2}] ${color2}[${color0}${cpu cpu2}${color2}] ${color2}[${color0}${cpu cpu3}${color2}] ${color2}[${color0}${cpu cpu4}${color2}] ${color2}|| ${color1}MEM ${color2}[${color0}$memperc${color2}] ${color2}|| ${color1}UP ${color0}$uptime_short

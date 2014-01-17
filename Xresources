@@ -2,15 +2,13 @@ xterm*termname: xterm-256color
 XTerm*locale: true
 
 URxvt*.cursorBlink: 1
-!*.font: xft:Dina:size=10:hinting=true:antialias=false
-!*.font: xft:Source Code Pro:pixelsize=12
-*.font: xft:Cousine:pixelsize=12
+*.font: xft:Meslo LG M:pixelsize=13
 
 URxvt.scrollBar: false
 URxvt*depth: 32
 URxvt*geometry: 88x30
-URxvt*fading: 10
+URxvt*fading: 5
 
 URxvt*iconFile: /usr/share/icons/Faience/apps/scalable/terminal.svg 
 
-#include ".schemes/solarized-light"
+#include ".schemes/base16-mocha.dark.xresources"

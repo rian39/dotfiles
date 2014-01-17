@@ -8,21 +8,21 @@
 # ID 1
 rounded = 0
 border_width = 0
-background_color = #E8E6E4 40
+background_color = #484848 100
 border_color = #FFFFFF 0
 
 # ID 2
 rounded = 0
 border_width = 0
-background_color = #DCC58F 23
+background_color = #D64937 100
 border_color = #FFFFFF 100
 
 # Panel
 panel_monitor = all
 panel_position = top left horizontal
-panel_size = 0 24
+panel_size = 0 25
 panel_margin = 0 0
-panel_padding = 0 0 0
+panel_padding = 3 0 9
 panel_dock = 0
 wm_menu = 0
 panel_layer = bottom
@@ -37,7 +37,7 @@ strut_policy = follow_size
 
 # Taskbar
 taskbar_mode = single_desktop
-taskbar_padding = 2 2 0
+taskbar_padding = 2 0 0
 taskbar_background_id = 0
 #taskbar_active_background_id = 0
 
@@ -46,11 +46,11 @@ urgent_nb_of_blink = 7
 task_icon = 0
 task_text = 1
 task_centered = 1
-task_maximum_size = 20000 32
-task_padding = 2 2
+task_maximum_size = 300 32
+task_padding = 4 4
 task_background_id = 0
 task_active_background_id = 0
-task_urgent_background_id = 0
+task_urgent_background_id = 2
 task_iconified_background_id = 0
 
 # Task Icons
@@ -60,16 +60,16 @@ task_urgent_icon_asb = 100 0 0
 task_iconified_icon_asb = 100 0 0
 
 # Fonts
-task_font = Source Sans Pro Semi-Bold 10
-task_font_color = #505152 100
-task_active_font_color = #E6E8E4 100
-task_urgent_font_color = #B63F53 100
-task_iconified_font_color = #505152 40
+task_font = Lato Bold 10
+task_font_color = #C0BEBE 100
+task_active_font_color = #FFFFFF 100
+task_urgent_font_color = #FFFFFF 100
+task_iconified_font_color = #D2D2D2 40
 font_shadow = 0
 
 # System Tray
 systray = 1
-systray_padding = 0 0 0
+systray_padding = 10 0 0
 systray_sort = ascending
 systray_background_id = 0
 systray_icon_size = 0
@@ -77,7 +77,7 @@ systray_icon_asb = 100 0 0
 
 # Clock
 time1_format = %H:%M
-time1_font = Source Sans Pro Heavy 12
+time1_font = Lato Heavy 10
 clock_font_color = #FFFFFF 100
 clock_tooltip = 
 clock_padding = 5 5
@@ -85,7 +85,7 @@ clock_background_id = 0
 
 # Tooltips
 tooltip = 0
-tooltip_padding = 0 0
+tooltip_padding = 10 0
 tooltip_show_timeout = 0
 tooltip_hide_timeout = 0
 tooltip_background_id = 0
@@ -93,18 +93,18 @@ tooltip_font = Sans 12
 tooltip_font_color = #FFFFFF 100
 
 # Mouse
-mouse_middle = none
-mouse_right = none
-mouse_scroll_up = none
-mouse_scroll_down = none
+mouse_middle = shade
+mouse_right = toggle_iconify
+mouse_scroll_up = next_task
+mouse_scroll_down = prev_task
 
 # Battery
 battery = 0
 battery_low_status = 20
 battery_low_cmd = notify-send "battery low"
 battery_hide = 90
-bat1_font = Source Sans Pro 10
-bat2_font = Source Sans Pro 10
+bat1_font = Lato 10
+bat2_font = Lato 10
 battery_font_color = #FFFFFF 100
 battery_padding = 0 0
 battery_background_id = 0

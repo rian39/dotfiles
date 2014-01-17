@@ -25,15 +25,57 @@ set ruler
 " Intuitive backspacing in insert mode
 set backspace=indent,eol,start
 
-" VUNDLE 
+"""""" VUNDLE 
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
+" vundle
 Bundle 'gmarik/vundle'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'tpope/vim-markdown'
+" follow VCS changes in the left gutter
+Bundle 'mhinz/vim-signify'
+" JSON syntax
+Bundle 'elzr/vim-json'
+" distraction-free with <leader>V
 Bundle 'mikewest/vimroom'
+" pandoc
+Bundle 'vim-pandoc/vim-pandoc-syntax'
 Bundle 'vim-pandoc/vim-pandoc'
-" END VUNDLE
+" less syntax
+Bundle 'groenewege/vim-less'
+" better javascript syntax
+Bundle 'pangloss/vim-javascript'
+" (un)comment with <leader>c(u/c)
+Bundle 'scrooloose/nerdcommenter'
+" use tab for auto-completion
+Bundle 'ervandew/supertab'
+" R communication
+"Bundle 'jalvesaq/VimCom'
+"Bundle 'jcfaria/Vim-R-plugin'
+" Add END after begin
+Bundle 'tpope/vim-endwise'
+" Liquid markup
+Bundle 'tpope/vim-liquid'
+" Snippets
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
+Bundle "honza/vim-snippets"
+" Base 16
+Bundle "chriskempson/base16-vim"
+Bundle "tpoisot/vim-base16-term"
+" Rainbow parentheses
+Bundle 'kien/rainbow_parentheses.vim'
+" Solarized
+Bundle 'altercation/vim-colors-solarized'
+"""""" END VUNDLE
+
+"Liquid
+let g:pandoc_use_embeds_in_codeblocks_for_langs = ['ruby', 'vim', 'python', 'r', 'json']
+
+"SuperTab!
+let g:SuperTabDefaultCompletionType = "context"
+
+" <leader>k Knits to MD
+nnoremap <leader>k :! Rscript -e "library(knitr);knit(input='%', output='%:r.md');"<CR>
 
 "The cursor is never on the last line
 set scrolloff=3
@@ -59,14 +101,29 @@ syntax enable "Syntax coloration
 filetype plugin indent on
 
 set t_Co=256
+let base16colorspace=256
 
-set background=light
-colorscheme solarized
+set background=dark
+colorscheme base16
 
-"For the R plugin
-let vimrplugin_screenplugin = 0
+"""""" Various writing improvements
 
-map q {!}fmt -w 80
+" New signs for the pandoc bundle
+let g:pandoc_syntax_user_cchars = {'atx': '¶', 'codelang': '> '}
+
+"Rmd and Rpres are pandoc
+au BufRead,BufNewFile *.Rmd,*.Rpres setfiletype pandoc
+
+" Format paragraphs with <leader>q
+map <leader>q {!}fmt -w 80<CR>}<CR>
+
+" Place markers with {type} for markdown files
+augroup markers
+   autocmd! BufEnter *.md,*.mkd,*.txt,*.Rmd,*.Rpres match Error '{\w\+}'
+augroup END
+nnoremap <leader>{ :vimgrep /{\w\+}/ %<CR>:copen<CR>
+"""""" END
+
 
 "Bib file for pandoc
 let g:pandoc_bibfiles = ['/home/tpoisot/texmf/bibtex/bib/local/library.bib']
@@ -89,3 +146,5 @@ let g:Tex_BibtexFlavor = 'bibtex'
 let g:Tex_Flavor='latex'
 let g:Tex_DefaultTargetFormat='pdf'
 set iskeyword+=:
+
+map <F3> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
