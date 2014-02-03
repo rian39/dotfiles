@@ -1,14 +1,21 @@
 xterm*termname: xterm-256color
 XTerm*locale: true
 
+Xft.dpi: 105
+Xft.antialias: true
+Xft.rgba: rgb
+Xft.hinting: true
+Xft.hintstyle: hintslight
+
 URxvt*.cursorBlink: 1
-*.font: xft:Meslo LG M:pixelsize=13
+*.font: xft:Consolas:size=9
+!*.boldFont: xft:Source Code Pro Semibold:size=9
 
 URxvt.scrollBar: false
 URxvt*depth: 32
 URxvt*geometry: 88x30
-URxvt*fading: 5
+URxvt*fading: 1
 
 URxvt*iconFile: /usr/share/icons/Faience/apps/scalable/terminal.svg 
 
-#include ".schemes/base16-mocha.dark.xresources"
+#include ".schemes/base16-flat.dark.xresources"

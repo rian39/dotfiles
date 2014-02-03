@@ -6,6 +6,11 @@ set cursorline
 " Replace <Leader> with ,
 let mapleader = ","
 
+
+" View whitespace
+nmap l :set list!
+set listchars=tab:»\ ,eol:¬
+
 " Better auto-completion of options
 set wildmenu
 set wildmode=list:longest
@@ -32,6 +37,8 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 " follow VCS changes in the left gutter
 Bundle 'mhinz/vim-signify'
+" Fugitive
+Bundle 'tpope/vim-fugitive'
 " JSON syntax
 Bundle 'elzr/vim-json'
 " distraction-free with <leader>V
@@ -64,12 +71,17 @@ Bundle "chriskempson/base16-vim"
 Bundle "tpoisot/vim-base16-term"
 " Rainbow parentheses
 Bundle 'kien/rainbow_parentheses.vim'
-" Solarized
-Bundle 'altercation/vim-colors-solarized'
+" ipython
+Bundle 'ivanov/vim-ipython'
 """""" END VUNDLE
 
+" python
+let python_highlight_all = 1
+let python_highlight_indent_errors = 0
+let python_highlight_space_errors = 0
+
 "Liquid
-let g:pandoc_use_embeds_in_codeblocks_for_langs = ['ruby', 'vim', 'python', 'r', 'json']
+let g:pandoc_use_embeds_in_codeblocks_for_langs = ['ruby', 'vim', 'python', 'r', 'json', 'c']
 
 "SuperTab!
 let g:SuperTabDefaultCompletionType = "context"
@@ -109,7 +121,7 @@ colorscheme base16
 """""" Various writing improvements
 
 " New signs for the pandoc bundle
-let g:pandoc_syntax_user_cchars = {'atx': '¶', 'codelang': '> '}
+let g:pandoc_syntax_user_cchars = {'atx': '¶', 'codelang': '>', 'footnote': '»', 'definition': '='}
 
 "Rmd and Rpres are pandoc
 au BufRead,BufNewFile *.Rmd,*.Rpres setfiletype pandoc

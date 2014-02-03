@@ -15,7 +15,7 @@ alias edit='vim'
 unset SSH_ASKPASS
 
 # Base 16 scheme
-/home/tpoisot/.schemes/shell/base16-mocha.dark.sh
+/home/tpoisot/.schemes/shell/base16-flat.dark.sh
 # Solarized dir colors
 eval `dircolors /home/tpoisot/.schemes/dir/solarized-light`
 
