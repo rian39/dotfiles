@@ -69,6 +69,8 @@ Bundle "honza/vim-snippets"
 " Base 16
 Bundle "chriskempson/base16-vim"
 Bundle "tpoisot/vim-base16-term"
+" Solarized
+" Bundle "altercation/vim-colors-solarized"
 " Rainbow parentheses
 Bundle 'kien/rainbow_parentheses.vim'
 " ipython
@@ -82,6 +84,11 @@ let python_highlight_space_errors = 0
 
 "Liquid
 let g:pandoc_use_embeds_in_codeblocks_for_langs = ['ruby', 'vim', 'python', 'r', 'json', 'c']
+
+"Signify
+let g:signify_sign_add      = '⇒'
+let g:signify_sign_delete   = '⇐'
+let g:signify_sign_change   = '⇔'
 
 "SuperTab!
 let g:SuperTabDefaultCompletionType = "context"
@@ -121,7 +128,7 @@ colorscheme base16
 """""" Various writing improvements
 
 " New signs for the pandoc bundle
-let g:pandoc_syntax_user_cchars = {'atx': '¶', 'codelang': '>', 'footnote': '»', 'definition': '='}
+let g:pandoc_syntax_user_cchars = {'atx': '¶', 'codelang': '>', 'footnote': '§', 'definition': '»'}
 
 "Rmd and Rpres are pandoc
 au BufRead,BufNewFile *.Rmd,*.Rpres setfiletype pandoc

@@ -8,14 +8,14 @@ Xft.hinting: true
 Xft.hintstyle: hintslight
 
 URxvt*.cursorBlink: 1
-*.font: xft:Consolas:size=9
-!*.boldFont: xft:Source Code Pro Semibold:size=9
+!URxvt.cursorUnderline: 1
+*.font: xft:Andale Mono:size=9
 
 URxvt.scrollBar: false
 URxvt*depth: 32
 URxvt*geometry: 88x30
-URxvt*fading: 1
+!URxvt*fading: 1
 
 URxvt*iconFile: /usr/share/icons/Faience/apps/scalable/terminal.svg 
 
-#include ".schemes/base16-flat.dark.xresources"
+#include ".schemes/base16-numix.dark.xresources"

@@ -1,106 +1,63 @@
-# Conky configuration
-# Edited by Izobalax 2009
-
-# set to yes if you want Conky to be forked in the background
+double_buffer yes
 background yes
 
-# Use Xft?
 use_xft yes
+xftfont Lato:size=6
+xftalpha 1.0
 
-# Xft font when Xft is enabled
-xftfont Roboto:bold:size=7
+update_interval 2.0
 
-# Text alpha when using Xft
-xftalpha 0.8
-
-# Update interval in seconds
-update_interval 1.0
-
-# This is the number of times Conky will update before quitting.
-# Set to zero to run forever.
 total_run_times 0
 
-# Create own window instead of using desktop (required in nautilus)
+own_window yes
 own_window_type desktop
-
-# Use double buffering (reduces flicker, may not work for everyone)
-double_buffer yes
-
-# Minimum size of text area
-minimum_size 200 0
-maximum_width 200
-
-# Draw shades?
-draw_shades no
-
-# Draw outlines?
-draw_outline no
-
-# Draw borders around text
-draw_borders no
-draw_graph_borders no
-
-# Stippled borders?
-stippled_borders 0
-
-# border width
-border_width 0
-
-# Default colors and also border colors
-#default_color black
-default_shade_color black
-default_outline_color white
-
-# own window options
-own_window		yes
-own_window_transparent	yes
-own_window_type		desktop
-own_window_hints	undecorated,below,sticky,skip_taskbar,skip_pager
-
-# Text alignment, other possible values are commented
-alignment top_right
-
-# Gap between borders of screen and text
-# same thing as passing -x at command line
-gap_x 20
-gap_y 20
-
-# Subtract file system buffers from used memory?
+own_window_transparent yes
+own_window_hints undecorated,below,skip_taskbar,sticky,skip_pager
 no_buffers yes
+minimum_size 250 1200
+draw_shades no
+draw_outline no
+draw_borders no
+stippled_borders 0
+alignment top_left
+gap_x 40
+gap_y 40
+uppercase no
 
-# set to yes if you want all text to be in uppercase
-uppercase none
+#use_spaces yes
 
-# number of cpu samples to average
-# set to 1 to disable averaging
-cpu_avg_samples 2
+color0 555
+color1 333
+color2 111
 
-# number of net samples to average
-# set to 1 to disable averaging
-net_avg_samples 2
-
-# Force UTF8? note that UTF8 support required XFT
-override_utf8_locale no
-
-# Add spaces to keep things from moving about?  This only affects certain objects.
-use_spacer no
-
-# Window color
 TEXT
-${color 2c3e50}Kernel ${alignr}${color b5bdc3}${kernel}
-${color 2c3e50}Uptime ${alignr}${color b5bdc3}$uptime_short
-${color 2c3e50}Core temp. ${alignr}${color b5bdc3}$acpitemp C
-${color 2c3e50}Battery ${alignr}${color b5bdc3}$battery_percent %
+${color2}${alignc}${font Lato:bold:size=8}${sysname} ${kernel}${font} 
 
+${color1}Uptime ${alignr}${color0}$uptime
+${color1}Core temperature ${alignr}${color0}$acpitemp °C
+${color1}Battery    ${alignr}${color0}$battery_percent %
+${color1}Mem.  ${alignr}${color0}$memperc %
+${color1}CPU  ${alignr}${color0}${freq} Mhz
 
-${color 2c3e50}CPU Usage ${alignr}${color b5bdc3}${cpu cpu0} %
-${cpugraph e67e22 e67e22}
-${color 9b59b6}${cpubar cpu1 5,44}${offset 8}${cpubar cpu2 5,44}${offset 8}${cpubar cpu3 5,44}${offset 8}${cpubar cpu4 5,44}
+${hr}
 
+${color2}${alignc}${font Lato:bold:size=8}CPU${font} 
 
-${color 2c3e50}Mem. usage ${alignr}${color b5bdc3}${memperc} %
-${memgraph 2980b9 2980b9}
+${color0}${alignc}${cpubar cpu1 4,240}
+${color0}${alignc}${cpubar cpu2 4,240}
+${color0}${alignc}${cpubar cpu3 4,240}
+${color0}${alignc}${cpubar cpu4 4,240}
 
+${hr}
 
-${color 2c3e50}Disk usage ${alignr}${color b5bdc3}${diskio}
-${diskiograph e74c3c e74c3c}
+${color2}${alignc}${font Lato:bold:size=8}Mem.${font} 
+
+${color0}${alignc}${membar 4,240}
+
+${hr}
+
+${color2}${alignc}${font Lato:bold:size=8}Tasks${font} 
+
+${color0}${exec cat ~/.todo}
+
+${hr}

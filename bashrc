@@ -15,9 +15,9 @@ alias edit='vim'
 unset SSH_ASKPASS
 
 # Base 16 scheme
-/home/tpoisot/.schemes/shell/base16-flat.dark.sh
+/home/tpoisot/.schemes/shell/base16-numix.dark.sh
 # Solarized dir colors
-eval `dircolors /home/tpoisot/.schemes/dir/solarized-light`
+#eval `dircolors /home/tpoisot/.schemes/dir/solarized-light`
 
 # Needed for git status in the prompt
 source /usr/share/git/git-prompt.sh 
