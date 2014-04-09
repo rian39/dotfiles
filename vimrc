@@ -6,9 +6,22 @@ set cursorline
 " Replace <Leader> with ,
 let mapleader = ","
 
+" Move across splits
+nnoremap <leader>sh :sp<CR>
+nnoremap <leader>sv :vsp<CR>
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+set splitbelow
+set splitright
+
+" Select blocks after indenting
+vnoremap < <gv
+vnoremap > >gv
 
 " View whitespace
-nmap l :set list!
+nnoremap <leader>l :set list!<CR>
 set listchars=tab:»\ ,eol:¬
 
 " Better auto-completion of options
@@ -20,7 +33,7 @@ set ignorecase
 set smartcase
 
 " Stop highlighting search matches
-nmap <silent> <leader>n :silent :nohlsearch<CR>
+nmap <silent> <leader>h :silent :nohlsearch<CR>
 
 " Scroll faster
 nnoremap <C-e> 5<C-e>
@@ -34,47 +47,65 @@ set backspace=indent,eol,start
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 " vundle
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 " follow VCS changes in the left gutter
-Bundle 'mhinz/vim-signify'
+Plugin 'mhinz/vim-signify'
 " Fugitive
-Bundle 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive'
+" GitHub issues
+Plugin 'jaxbot/github-issues.vim'
 " JSON syntax
-Bundle 'elzr/vim-json'
+Plugin 'elzr/vim-json'
 " distraction-free with <leader>V
-Bundle 'mikewest/vimroom'
+Plugin 'BenoitZugmeyer/vimroom'
 " pandoc
-Bundle 'vim-pandoc/vim-pandoc-syntax'
-Bundle 'vim-pandoc/vim-pandoc'
+Plugin 'vim-pandoc/vim-pandoc-syntax'
+Plugin 'vim-pandoc/vim-pandoc'
 " less syntax
-Bundle 'groenewege/vim-less'
+Plugin 'groenewege/vim-less'
+" scss syntax
+Plugin 'cakebaker/scss-syntax.vim'
+" CSS colors
+Plugin 'ap/vim-css-color'
 " better javascript syntax
-Bundle 'pangloss/vim-javascript'
+Plugin 'pangloss/vim-javascript'
 " (un)comment with <leader>c(u/c)
-Bundle 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdcommenter'
 " use tab for auto-completion
-Bundle 'ervandew/supertab'
+Plugin 'ervandew/supertab'
+" Neocomplete
+Plugin 'Shougo/neocomplete.vim'
 " R communication
-"Bundle 'jalvesaq/VimCom'
-"Bundle 'jcfaria/Vim-R-plugin'
+"Plugin 'jalvesaq/VimCom'
+"Plugin 'jcfaria/Vim-R-plugin'
 " Add END after begin
-Bundle 'tpope/vim-endwise'
+Plugin 'tpope/vim-endwise'
+" Surround
+Plugin 'tpope/vim-surround'
 " Liquid markup
-Bundle 'tpope/vim-liquid'
+Plugin 'tpope/vim-liquid'
 " Snippets
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 Bundle "honza/vim-snippets"
-" Base 16
-Bundle "chriskempson/base16-vim"
-Bundle "tpoisot/vim-base16-term"
-" Solarized
-" Bundle "altercation/vim-colors-solarized"
-" Rainbow parentheses
-Bundle 'kien/rainbow_parentheses.vim'
 " ipython
-Bundle 'ivanov/vim-ipython'
+Plugin 'ivanov/vim-ipython'
+" julia
+Plugin 'JuliaLang/julia-vim'
+" Autoclose brackets
+Plugin 'Townk/vim-autoclose'
+" Theme
+Plugin 'tpoisot/vim-base16-term'
+" Ctags
+Plugin 'majutsushi/tagbar'
+" NERD Tree with git support
+Plugin 'Xuyuanp/nerdtree'
+" LaTeX-Suite
+Plugin 'git://git.code.sf.net/p/vim-latex/vim-latex'
+" Create gists
+Plugin 'mattn/gist-vim'
+Plugin 'mattn/webapi-vim'
 """""" END VUNDLE
 
 " python
@@ -82,16 +113,23 @@ let python_highlight_all = 1
 let python_highlight_indent_errors = 0
 let python_highlight_space_errors = 0
 
-"Liquid
-let g:pandoc_use_embeds_in_codeblocks_for_langs = ['ruby', 'vim', 'python', 'r', 'json', 'c']
+" NERDTree
+nnoremap <leader>f :NERDTreeToggle<CR>
 
-"Signify
-let g:signify_sign_add      = '⇒'
-let g:signify_sign_delete   = '⇐'
-let g:signify_sign_change   = '⇔'
+" tagbar
+nnoremap <leader>t :TagbarToggle<CR>
+
+"Liquid
+let g:pandoc_use_embeds_in_codeblocks_for_langs = ['ruby', 'vim', 'python', 'r', 'json', 'c', 'julia']
 
 "SuperTab!
 let g:SuperTabDefaultCompletionType = "context"
+
+" NeoComplete
+let g:neocomplete#enable_at_startup = 0
+let g:neocomplete#enable_smart_case = 1
+nnoremap <leader>ne :NeoCompleteEnable<CR>
+nnoremap <leader>nd :NeoCompleteDisable<CR>
 
 " <leader>k Knits to MD
 nnoremap <leader>k :! Rscript -e "library(knitr);knit(input='%', output='%:r.md');"<CR>
@@ -122,13 +160,13 @@ filetype plugin indent on
 set t_Co=256
 let base16colorspace=256
 
-set background=dark
+set background=light
 colorscheme base16
 
 """""" Various writing improvements
 
 " New signs for the pandoc bundle
-let g:pandoc_syntax_user_cchars = {'atx': '¶', 'codelang': '>', 'footnote': '§', 'definition': '»'}
+let g:pandoc_syntax_user_cchars = {'atx': '¶', 'codelang': '>', 'footnote': '§', 'definition': '»', 'newline': '¬'}
 
 "Rmd and Rpres are pandoc
 au BufRead,BufNewFile *.Rmd,*.Rpres setfiletype pandoc
@@ -138,14 +176,15 @@ map <leader>q {!}fmt -w 80<CR>}<CR>
 
 " Place markers with {type} for markdown files
 augroup markers
-   autocmd! BufEnter *.md,*.mkd,*.txt,*.Rmd,*.Rpres match Error '{\w\+}'
+   autocmd! BufEnter *.md,*.mkd,*.txt,*.Rmd,*.Rpres match Error '{{\w\+}}'
 augroup END
-nnoremap <leader>{ :vimgrep /{\w\+}/ %<CR>:copen<CR>
+nnoremap <leader>{{ :vimgrep /{\w\+}}/ %<CR>:copen<CR>
 """""" END
 
 
 "Bib file for pandoc
-let g:pandoc_bibfiles = ['/home/tpoisot/texmf/bibtex/bib/local/library.bib']
+let g:pandoc_bibfiles = ['/home/tp/texmf/bibtex/bib/local/library.bib']
+"let g:pandoc_use_bibtool = 1
 
 "Indentation parameters
 set autoindent
@@ -160,10 +199,42 @@ set smarttab
 set grepprg=grep\ -nH\ $*
 
 " Latex kind of stuff
-let g:Tex_BIBINPUTS = "/home/tpoisot/texmf/bibtex/bib/local/library.bib"
+let g:Tex_BIBINPUTS = "/home/tp/texmf/bibtex/bib/local/library.bib"
 let g:Tex_BibtexFlavor = 'bibtex'
 let g:Tex_Flavor='latex'
 let g:Tex_DefaultTargetFormat='pdf'
 set iskeyword+=:
 
 map <F3> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
+
+" GitHub access token
+let g:github_access_token = "f8dfb0560ec35045a19e5f1eebba73d137f7cff7"
+let g:github_upstream_issues = 1
+
+" tagbar markdown
+let g:tagbar_type_pandoc = {
+    \ 'ctagstype': 'pandoc',
+    \ 'ctagsbin' : '~/.scripts/markdown2ctags.py',
+    \ 'ctagsargs' : '-f - --sort=yes',
+    \ 'kinds' : [
+        \ 's:sections',
+        \ 'i:images'
+    \ ],
+    \ 'sro' : '|',
+    \ 'kind2scope' : {
+        \ 's' : 'section',
+    \ },
+    \ 'sort': 0,
+\ }
+
+" tagbar r
+let g:tagbar_type_r = {
+    \ 'ctagstype' : 'r',
+    \ 'kinds'     : [
+        \ 'f:Functions',
+        \ 'g:GlobalVariables',
+        \ 'v:FunctionVariables',
+    \ ]
+\ }
+" Gist options
+let g:gist_detect_filetype = 1

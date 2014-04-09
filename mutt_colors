@@ -29,8 +29,8 @@ color tree cyan default # the "tree" display of threads within the folder index
 color search brightgreen default # search matches found with search within the internal pager 
 color markers black default # The markers indicate a wrapped line 
 color index brightgreen default '~N'
-color index red default '~F' # Flagged Messages are important! 
-color index black red '~D' # Messages flagged for deletion
+color index brightblue default '~F' # Flagged Messages are important! 
+color index brightred default '~D' # Messages flagged for deletion
 
 # identifies email addresses 
 color body green default [\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+

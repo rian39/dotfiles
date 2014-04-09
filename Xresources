@@ -1,21 +1,24 @@
 xterm*termname: xterm-256color
 XTerm*locale: true
 
-Xft.dpi: 105
+Xft.dpi: 118
+Xft.lcdfilter: lcddefault
 Xft.antialias: true
-Xft.rgba: rgb
+Xft.rgba: rgba
 Xft.hinting: true
-Xft.hintstyle: hintslight
+Xft.hintstyle: hintfull
 
 URxvt*.cursorBlink: 1
-!URxvt.cursorUnderline: 1
-*.font: xft:Andale Mono:size=9
+*.font: xft:Andale Mono:size=8
+
+urxvt*perl-ext-common: fullscreen
+urxvt*keysym.F11: perl:fullscreen:switch
 
 URxvt.scrollBar: false
 URxvt*depth: 32
 URxvt*geometry: 88x30
 !URxvt*fading: 1
 
-URxvt*iconFile: /usr/share/icons/Faience/apps/scalable/terminal.svg 
+URxvt*iconFile: /usr/share/icons/Numix-Circle/48x48/applications/terminal.svg
 
-#include ".schemes/base16-numix.dark.xresources"
+#include ".schemes/base16-brewer.light.xresources"

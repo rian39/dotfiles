@@ -6,6 +6,7 @@ set fast_reply
 set smart_wrap
 set nomarkers
 set pager_context = 3      # show status in the pager
+set pager_stop
 set delete = ask-yes
 set print = ask-yes
 set sort_aux = date-received
@@ -18,7 +19,7 @@ set nomark_old             # mark all unread messages as unread
 set index_format = "%Z %{%b %d} %-15.15L (%?l?%4l&%4c?) %s"
 
 #My Editor
-set editor='vim + -c "set textwidth=78" -c "set wrap" -c "set nocp" -c "?^$"' 
+set editor='vim + -c "set textwidth=80" -c "set wrap" -c "set nocp" -c "?^$"' 
 
 #Local Folders
 set header_cache =~/.mutt/cache/headers
@@ -27,10 +28,12 @@ set certificate_file =~/.mutt/certificates
 
 #Special Keybindings 
 bind editor <space> noop
-macro index,pager d "<save-message>+[Gmail]/Archived<enter>" "Move to archive"
+macro index,pager d "<save-message>+Archived<enter>" "Archive"
 macro index gi "=INBOX" "Go to inbox" 
 macro index gs "=[Gmail]/Messages envoyés" "Go to Sent Mail" 
 macro index gd "=[Gmail]/Brouillons" "Go to drafts" 
+macro index ga "=[Gmail]/Archived" "Go to archives" 
+mailboxes "=INBOX"
 
 #Mutt Session Security 
 set move = no #Stop asking to "move read messages to mbox"! 
@@ -40,4 +43,4 @@ set imap_keepalive = 900
 #macro pager \cu |urlview\n
 
 source "$HOME/.mutt/aliases"
-source "/home/tpoisot/.mutt/colors"
+source "/home/tp/.mutt/colors"
